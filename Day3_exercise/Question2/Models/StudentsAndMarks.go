@@ -6,5 +6,5 @@ type StudentAndMarks struct {
 	LastName  string  `json:"last-name"`
 	DOB       string  `json:"dob"`
 	Address   string  `json:"address"`
-	marks     Marks[] `json:"address"`
+	Marks     []Marks `json:"marks"`
 }
