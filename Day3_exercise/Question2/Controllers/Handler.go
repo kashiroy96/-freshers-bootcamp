@@ -1,7 +1,7 @@
 package Controllers
 
 import (
-	"Question2/Models"
+	Models "Question2/Models"
 	"fmt"
 	"github.com/gin-gonic/gin"
 	"net/http"
@@ -150,7 +150,7 @@ func StudentsMarks(c *gin.Context) {
 			c.AbortWithStatus(http.StatusNotFound)
 		} else {
 
-			studentAndMarks := Models.StudentAndMarks{student.Id, student.FirstName, student.LastName, student.DOB, student.Address, marks}
+			studentAndMarks := Models.StudentAndMarks{Id: student.Id, FirstName: student.FirstName, LastName: student.LastName, DOB: student.DOB, Address: student.Address, Marks: marks}
 			c.JSON(http.StatusOK, studentAndMarks)
 		}
 	}
